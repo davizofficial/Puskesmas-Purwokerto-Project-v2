@@ -63,7 +63,7 @@ export default function GaleriPage() {
 
   return (
     <div>
-      {/* Page Header */}
+
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Galeri</h1>
@@ -73,9 +73,8 @@ export default function GaleriPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
-        {/* Fasilitas */}
+
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-emerald-700 mb-4">
             Fasilitas Kami
@@ -107,7 +106,6 @@ export default function GaleriPage() {
           </div>
         </section>
 
-        {/* Kegiatan */}
         <section>
           <h2 className="text-4xl font-bold text-emerald-700 mb-4">
             Kegiatan Kami
