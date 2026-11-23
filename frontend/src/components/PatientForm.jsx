@@ -53,7 +53,6 @@ export default function PatientForm({ onAddPatient, onNavigate }) {
       const createdPatient = await onAddPatient(payload);
       setLastRegistered(createdPatient);
 
-      // Reset input form
       setFormData({
         nama: "",
         nik: "",
@@ -76,7 +75,6 @@ export default function PatientForm({ onAddPatient, onNavigate }) {
         Formulir Pendaftaran
       </h2>
 
-      {/* Notifikasi Sukses Pendaftaran & Nomor Tiket */}
       {lastRegistered && (
         <div className="mb-8 p-6 bg-emerald-50 border border-emerald-500 rounded-xl shadow-sm transition">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -126,7 +124,7 @@ export default function PatientForm({ onAddPatient, onNavigate }) {
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Formulir Input Controlled Component (2 Kolom) */}
+
         <div className="lg:col-span-2">
           <div className="bg-white rounded-lg shadow-md p-8">
             <form onSubmit={handleSubmit}>
@@ -266,7 +264,6 @@ export default function PatientForm({ onAddPatient, onNavigate }) {
           </div>
         </div>
 
-        {/* Panduan Pendaftaran (1 Kolom Samping - Sesuai Legacy HTML) */}
         <div>
           <div className="bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6 shadow-sm sticky top-24">
             <h3 className="font-bold text-emerald-700 mb-4 text-lg">
