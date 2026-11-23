@@ -1,6 +1,3 @@
-/**
- * Entitas utama Pasien untuk sistem antrean Puskesmas Purwokerto.
- */
 export class Patient {
   id: string;
   nomorAntrean: number;
