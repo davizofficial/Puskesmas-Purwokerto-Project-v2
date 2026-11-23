@@ -65,7 +65,7 @@ npm run dev
 Berikut adalah tangkapan layar implementasi kode dan pengujian yang tersimpan pada folder `docs/screenshots/`:
 
 ### 1. Patient Entity
-![Patient Entity](docs/screenshots/01-patient-entity.png)
+![Patient Entity](docs/screenshots/01-patient-entity.png.png)
 
 ### 2. Patients Module
 ![Patients Module](docs/screenshots/02-patients-module.png)
@@ -89,7 +89,24 @@ Berikut adalah tangkapan layar implementasi kode dan pengujian yang tersimpan pa
 ![Exception Handling](docs/screenshots/08-exception-handling.png)
 
 ### 9. Pengujian REST Client
-![Pengujian REST Client](docs/screenshots/09-rest-client-testing.png)
 
-### 10. Integrasi Frontend dan Backend
-![Integrasi Frontend dan Backend](docs/screenshots/10-integrasi-frontend-backend.png)
+#### a. GET Seluruh Data Pasien
+![Pengujian REST Client GET All](docs/screenshots/09-rest-client-testing.png)
+
+#### b. GET Data Pasien Berdasarkan ID
+![Pengujian REST Client GET by ID](docs/screenshots/09-rest-client-testing-get-by-id.png)
+
+#### c. POST Tambah Data Pasien
+![Pengujian REST Client POST Data](docs/screenshots/09-rest-client-testing-post-data.png)
+
+#### d. PATCH Ubah Status Pasien Berdasarkan ID
+![Pengujian REST Client PATCH Status](docs/screenshots/09-rest-client-testing-patch-status-by-id.png)
+
+#### e. DELETE Hapus Data Pasien Berdasarkan ID
+![Pengujian REST Client DELETE by ID](docs/screenshots/09-rest-client-testing-delete-by-id.png)
+
+#### f. Uji Exception Handling (Validasi DTO dan NotFoundException)
+![Uji Exception Handling](docs/screenshots/09-uji-exception-handling.png)
+
+#### g. Uji Exception Handling (ConflictException - NIK Duplikat)
+![Uji ConflictException](docs/screenshots/09-uji-exception-handling-conflictexception.png)
