@@ -68,7 +68,7 @@ export default function DokterPage() {
 
   return (
     <div>
-      {/* Page Header */}
+
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Tim Dokter Kami</h1>
@@ -78,7 +78,6 @@ export default function DokterPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         <section>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
@@ -90,7 +89,7 @@ export default function DokterPage() {
                 Temukan dokter sesuai kebutuhan medis Anda
               </p>
             </div>
-            {/* Live Search Box */}
+
             <div className="relative w-full md:w-80">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-emerald-600">
                 <i className="fas fa-search"></i>
@@ -105,7 +104,6 @@ export default function DokterPage() {
             </div>
           </div>
 
-          {/* Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((cat) => (
               <button
@@ -143,7 +141,7 @@ export default function DokterPage() {
               ))}
             </div>
           ) : (
-            /* Pesan jika dokter tidak ditemukan */
+
             <div className="text-center py-12 bg-white rounded-lg shadow-sm border mt-6">
               <i className="fas fa-user-slash text-gray-400 text-5xl mb-3"></i>
               <p className="text-gray-600 font-medium">
@@ -162,7 +160,6 @@ export default function DokterPage() {
           )}
         </section>
 
-        {/* Info Section */}
         <section className="mt-12 bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6">
           <h3 className="font-bold text-emerald-700 text-lg mb-4">
             Jadwal Praktik
