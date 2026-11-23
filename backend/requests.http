@@ -1,0 +1,63 @@
+### 1. GET - Ambil seluruh data pasien
+GET http://localhost:3000/patients
+
+### 2. GET - Ambil satu data pasien berdasarkan ID
+GET http://localhost:3000/patients/PS-1042
+
+### 3. POST - Tambah pasien baru (sukses)
+POST http://localhost:3000/patients
+Content-Type: application/json
+
+{
+  "nama": "Ahmad Fauzi",
+  "nik": "3302101205980009",
+  "email": "ahmad.fauzi@example.com",
+  "telepon": "081234567899",
+  "alamat": "Jln. Overste Isdiman No. 18, Purwokerto",
+  "jenisKelamin": "Laki-laki",
+  "tanggalLahir": "1998-05-12",
+  "poli": "Pemeriksaan Umum",
+  "keluhan": "Sakit kepala dan demam ringan sejak kemarin"
+}
+
+### 4. PATCH - Ubah status pasien
+PATCH http://localhost:3000/patients/PS-1043
+Content-Type: application/json
+
+{
+  "status": "Sedang Diperiksa"
+}
+
+### 5. DELETE - Hapus data pasien
+DELETE http://localhost:3000/patients/PS-1045
+
+### 6. Uji Validasi DTO (400 Bad Request)
+POST http://localhost:3000/patients
+Content-Type: application/json
+
+{
+  "nama": "AB",
+  "nik": "123",
+  "telepon": "0812",
+  "alamat": "",
+  "jenisKelamin": "Tidak Diketahui",
+  "tanggalLahir": "bukan-tanggal",
+  "poli": "Poli Tidak Ada"
+}
+
+### 7. Uji Exception Handling - NotFoundException (404 Not Found)
+GET http://localhost:3000/patients/PS-9999
+
+### 8. Uji Exception Handling - ConflictException (409 Conflict - NIK Duplikat)
+POST http://localhost:3000/patients
+Content-Type: application/json
+
+{
+  "nama": "Budi Duplikat",
+  "nik": "3302101508920001",
+  "telepon": "081234567890",
+  "alamat": "Jln. Jend. Soedirman No. 12, Purwokerto",
+  "jenisKelamin": "Laki-laki",
+  "tanggalLahir": "1992-08-15",
+  "poli": "Pemeriksaan Umum"
+}
