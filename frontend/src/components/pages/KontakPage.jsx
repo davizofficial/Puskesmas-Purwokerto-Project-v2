@@ -19,7 +19,7 @@ export default function KontakPage() {
 
   return (
     <div>
-      {/* Page Header */}
+
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Hubungi Kami</h1>
@@ -29,16 +29,15 @@ export default function KontakPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
-        {/* Contact Info */}
+
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-emerald-700 mb-12">
             Informasi Kontak
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Info 1 */}
+
             <div className="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition">
               <div className="text-emerald-600 text-5xl mb-4">
                 <i className="fas fa-map-marker-alt"></i>
@@ -51,7 +50,6 @@ export default function KontakPage() {
               </p>
             </div>
 
-            {/* Info 2 */}
             <div className="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition">
               <div className="text-emerald-600 text-5xl mb-4">
                 <i className="fas fa-phone"></i>
@@ -64,7 +62,6 @@ export default function KontakPage() {
               </p>
             </div>
 
-            {/* Info 3 */}
             <div className="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition">
               <div className="text-emerald-600 text-5xl mb-4">
                 <i className="fas fa-envelope"></i>
@@ -79,7 +76,6 @@ export default function KontakPage() {
           </div>
         </section>
 
-        {/* Contact Form */}
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-emerald-700 mb-12">
             Kirim Pesan
@@ -93,7 +89,7 @@ export default function KontakPage() {
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Form */}
+
             <div className="lg:col-span-2">
               <div className="bg-white rounded-lg shadow-md p-8">
                 <form onSubmit={handleSubmit}>
@@ -187,7 +183,6 @@ export default function KontakPage() {
               </div>
             </div>
 
-            {/* Operating Hours */}
             <div className="bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6 h-fit">
               <h3 className="font-bold text-emerald-700 text-lg mb-4">
                 Jam Operasional
