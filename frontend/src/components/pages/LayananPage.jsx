@@ -1,7 +1,7 @@
 export default function LayananPage() {
   return (
     <div>
-      {/* Page Header */}
+
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Layanan Kesehatan</h1>
@@ -11,7 +11,6 @@ export default function LayananPage() {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         <section>
           <h2 className="text-4xl font-bold text-emerald-700 mb-12">
@@ -19,7 +18,7 @@ export default function LayananPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Service 1 */}
+
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-stethoscope"></i>
@@ -34,7 +33,6 @@ export default function LayananPage() {
               </p>
             </div>
 
-            {/* Service 2 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-syringe"></i>
@@ -49,7 +47,6 @@ export default function LayananPage() {
               </p>
             </div>
 
-            {/* Service 3 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-baby"></i>
@@ -64,7 +61,6 @@ export default function LayananPage() {
               </p>
             </div>
 
-            {/* Service 4 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-flask"></i>
@@ -79,7 +75,6 @@ export default function LayananPage() {
               </p>
             </div>
 
-            {/* Service 5 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-prescription-bottle"></i>
@@ -92,7 +87,6 @@ export default function LayananPage() {
               </p>
             </div>
 
-            {/* Service 6 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-tooth"></i>
@@ -109,7 +103,6 @@ export default function LayananPage() {
           </div>
         </section>
 
-        {/* Info Section */}
         <section className="mt-12 bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6">
           <h3 className="font-bold text-emerald-700 text-lg mb-4">
             Informasi Penting
