@@ -26,9 +26,6 @@ export const ALLOWED_STATUS = [
   'Selesai',
 ] as const;
 
-/**
- * DTO untuk pendaftaran pasien baru.
- */
 export class CreatePatientDto {
   @IsString({ message: 'Nama lengkap harus berupa teks.' })
   @IsNotEmpty({ message: 'Nama lengkap wajib diisi.' })
