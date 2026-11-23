@@ -1,7 +1,7 @@
 export default function HeroSection({ onNavigate }) {
   return (
     <>
-      {/* Hero Section dengan Background Image */}
+
       <section
         className="relative h-96 md:h-[500px] bg-cover bg-center"
         style={{
@@ -9,10 +9,9 @@ export default function HeroSection({ onNavigate }) {
             "url('https://puskesmaspurwokerto.com/assets/banner.webp')",
         }}
       >
-        {/* Dark Overlay */}
+
         <div className="absolute inset-0 bg-black/45"></div>
 
-        {/* Content */}
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
@@ -39,7 +38,6 @@ export default function HeroSection({ onNavigate }) {
         </div>
       </section>
 
-      {/* Welcome & Info Section */}
       <section className="mb-16 pt-12">
         <h2 className="text-3xl md:text-4xl font-bold text-emerald-700 mb-6">
           Selamat Datang di Puskesmas Purwokerto
@@ -54,7 +52,6 @@ export default function HeroSection({ onNavigate }) {
           </p>
         </div>
 
-        {/* Info Box */}
         <div className="bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6 shadow-sm">
           <h3 className="font-bold text-emerald-700 text-lg mb-3 flex items-center">
             <i className="fas fa-map-marker-alt mr-2"></i> Lokasi & Jam Operasional
