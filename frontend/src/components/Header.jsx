@@ -25,7 +25,7 @@ export default function Header({ activePage, onNavigate }) {
     <nav className="bg-emerald-800 sticky top-0 z-50 shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          {/* Logo / Brand */}
+
           <button
             onClick={() => handleNavClick("beranda")}
             className="text-white font-bold text-lg flex items-center hover:opacity-95 transition cursor-pointer"
@@ -33,7 +33,6 @@ export default function Header({ activePage, onNavigate }) {
             <i className="fas fa-hospital mr-2"></i> Puskesmas Purwokerto
           </button>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-white md:hidden text-2xl focus:outline-none cursor-pointer"
@@ -46,7 +45,6 @@ export default function Header({ activePage, onNavigate }) {
             ></i>
           </button>
 
-          {/* Desktop Menu - Bersih murni teks tanpa ikon dan tanpa tombol petugas */}
           <div className="hidden md:flex gap-4 lg:gap-6">
             {menuItems.map((item) => (
               <button
@@ -62,7 +60,6 @@ export default function Header({ activePage, onNavigate }) {
           </div>
         </div>
 
-        {/* Mobile Menu Dropdown */}
         {mobileMenuOpen && (
           <div
             id="mobile-menu"
