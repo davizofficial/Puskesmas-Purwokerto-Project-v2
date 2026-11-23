@@ -58,6 +58,16 @@ npm run dev
 ```
 *Frontend berjalan di port `5173` dan terhubung ke `http://localhost:3000/patients`.*
 
+### 3. Mengakses Halaman Petugas (Dashboard Manajemen Antrean)
+
+Aplikasi frontend menggunakan navigasi berbasis state pada alamat `http://localhost:5173`. Untuk membuka halaman petugas:
+
+1. Buka `http://localhost:5173`, lalu gulir ke bagian paling bawah halaman (Footer) dan klik **Portal Petugas**.
+2. Masuk menggunakan akun petugas berikut:
+   - **Username**: `petugas`
+   - **Kata Sandi**: `puskesmas123`
+3. Setelah berhasil masuk, halaman **Manajemen Antrean** akan terbuka untuk mengelola status pemeriksaan pasien (`Panggil`, `Selesai`) dan menghapus data antrean.
+
 ---
 
 ## Dokumentasi Screenshot
