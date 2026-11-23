@@ -1,7 +1,7 @@
 export default function HomePage({ onNavigate }) {
   return (
     <div>
-      {/* Hero Section dengan Background Image */}
+
       <section
         className="relative h-96 md:h-screen bg-cover bg-center"
         style={{
@@ -9,10 +9,9 @@ export default function HomePage({ onNavigate }) {
             "url('https://puskesmaspurwokerto.com/assets/banner.webp')",
         }}
       >
-        {/* Dark Overlay */}
+
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Content */}
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
@@ -39,9 +38,8 @@ export default function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
-        {/* Welcome Section */}
+
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-emerald-700 mb-8">
             Selamat Datang di Puskesmas Purwokerto
@@ -56,7 +54,6 @@ export default function HomePage({ onNavigate }) {
             </p>
           </div>
 
-          {/* Info Box */}
           <div className="bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6">
             <h3 className="font-bold text-emerald-700 text-lg mb-4">
               <i className="fas fa-map-marker-alt mr-2"></i> Lokasi & Jam Operasional
@@ -74,13 +71,12 @@ export default function HomePage({ onNavigate }) {
           </div>
         </section>
 
-        {/* Services Section */}
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-emerald-700 mb-8">
             Layanan Unggulan Kami
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Service 1 */}
+
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-stethoscope"></i>
@@ -94,7 +90,6 @@ export default function HomePage({ onNavigate }) {
               </p>
             </div>
 
-            {/* Service 2 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-syringe"></i>
@@ -108,7 +103,6 @@ export default function HomePage({ onNavigate }) {
               </p>
             </div>
 
-            {/* Service 3 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-baby"></i>
@@ -122,7 +116,6 @@ export default function HomePage({ onNavigate }) {
               </p>
             </div>
 
-            {/* Service 4 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-flask"></i>
@@ -136,7 +129,6 @@ export default function HomePage({ onNavigate }) {
               </p>
             </div>
 
-            {/* Service 5 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-prescription-bottle"></i>
@@ -150,7 +142,6 @@ export default function HomePage({ onNavigate }) {
               </p>
             </div>
 
-            {/* Service 6 */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
               <div className="text-emerald-600 text-4xl mb-4">
                 <i className="fas fa-tooth"></i>
@@ -166,7 +157,6 @@ export default function HomePage({ onNavigate }) {
           </div>
         </section>
 
-        {/* Why Choose Us */}
         <section className="mb-16">
           <h2 className="text-4xl font-bold text-emerald-700 mb-8">
             Mengapa Memilih Puskesmas Purwokerto?
@@ -217,7 +207,6 @@ export default function HomePage({ onNavigate }) {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="text-center mb-16">
           <h3 className="text-3xl font-bold text-emerald-700 mb-6">
             Siap untuk Memulai?
