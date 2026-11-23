@@ -21,7 +21,7 @@ export default function PatientList({ patients }) {
 
   return (
     <section>
-      {/* Ringkasan Jumlah Antrean */}
+
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <div className="bg-white border border-gray-200 rounded-lg p-5">
           <p className="text-xs text-gray-500 font-medium">Sedang Diperiksa</p>
@@ -45,7 +45,6 @@ export default function PatientList({ patients }) {
         </div>
       </div>
 
-      {/* Filter & Pencarian Sederhana */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
         <div className="w-full sm:w-72">
           <input
@@ -75,7 +74,6 @@ export default function PatientList({ patients }) {
         </div>
       </div>
 
-      {/* Conditional Rendering apabila antrean kosong */}
       {patients.length === 0 ? (
         <div className="bg-white border border-gray-200 rounded-lg p-12 text-center">
           <h3 className="text-xl font-bold text-gray-700 mb-2">
@@ -90,7 +88,7 @@ export default function PatientList({ patients }) {
           Tidak ditemukan antrean dengan kata kunci tersebut.
         </div>
       ) : (
-        /* Render List .map() dengan key unik */
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredPatients.map((patient) => (
             <PatientCard key={patient.id} patient={patient} isStaff={false} />
