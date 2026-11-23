@@ -20,7 +20,7 @@ export default function PatientCard({
   return (
     <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 flex flex-col justify-between hover:border-emerald-500 transition">
       <div>
-        {/* Nomor Tiket & Status */}
+
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold font-mono text-emerald-800">
             {patient.id}
@@ -34,12 +34,10 @@ export default function PatientCard({
           </span>
         </div>
 
-        {/* Nama Pasien */}
         <h3 className="text-lg font-bold text-gray-900 mb-2">
           {patient.nama}
         </h3>
 
-        {/* Info Tambahan untuk Staf Medis (Privat) */}
         {isStaff && (
           <div className="mb-3 text-xs text-gray-600 font-mono bg-gray-50 p-2 rounded border border-gray-200">
             <div>NIK: {patient.nik}</div>
@@ -47,7 +45,6 @@ export default function PatientCard({
           </div>
         )}
 
-        {/* Info Layanan & Waktu */}
         <div className="text-sm text-gray-600 space-y-1 mb-4">
           <div className="flex justify-between">
             <span className="text-gray-500">Layanan:</span>
@@ -59,7 +56,6 @@ export default function PatientCard({
           </div>
         </div>
 
-        {/* Keluhan hanya untuk Petugas Medis */}
         {isStaff && patient.keluhan && (
           <div className="text-xs bg-gray-50 p-2.5 rounded border border-gray-200 mb-4 text-gray-700">
             <span className="font-semibold text-gray-600 block mb-0.5">
@@ -70,7 +66,6 @@ export default function PatientCard({
         )}
       </div>
 
-      {/* Aksi Petugas */}
       {isStaff && (
         <div className="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
           <div className="flex gap-2">
