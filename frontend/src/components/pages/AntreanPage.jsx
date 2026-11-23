@@ -3,7 +3,7 @@ import PatientList from "../PatientList";
 export default function AntreanPage({ patients, onNavigate }) {
   return (
     <div>
-      {/* Page Header */}
+
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -29,7 +29,6 @@ export default function AntreanPage({ patients, onNavigate }) {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <PatientList patients={patients} />
       </div>
