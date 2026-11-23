@@ -10,12 +10,11 @@ export default function PetugasDashboard({
   onLogout,
   onNavigate,
 }) {
-  const [activeTab, setActiveTab] = useState("Semua"); // 'Semua' | 'Menunggu' | 'Sedang Diperiksa' | 'Selesai'
+  const [activeTab, setActiveTab] = useState("Semua");
   const [filterPoli, setFilterPoli] = useState("Semua");
   const [searchQuery, setSearchQuery] = useState("");
-  const [viewMode, setViewMode] = useState("table"); // 'table' | 'cards'
+  const [viewMode, setViewMode] = useState("table");
 
-  // Hitung jumlah status antrean
   const countMenunggu = patients.filter((p) => p.status === "Menunggu").length;
   const countDiperiksa = patients.filter(
     (p) => p.status === "Sedang Diperiksa"
@@ -34,7 +33,7 @@ export default function PetugasDashboard({
 
   return (
     <div className="bg-gray-50 min-h-screen pb-16">
-      {/* Topbar Bersih Petugas */}
+
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -64,7 +63,7 @@ export default function PetugasDashboard({
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        {/* Navigasi Tab Status yang Mempermudah Tugas */}
+
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6 border-b border-gray-200 pb-4">
           <div className="flex gap-2">
             {[
@@ -100,7 +99,6 @@ export default function PetugasDashboard({
             ))}
           </div>
 
-          {/* Pengujian Dosen & Utilitas Ringan */}
           <div className="flex items-center gap-2">
             <button
               onClick={() => setViewMode(viewMode === "table" ? "cards" : "table")}
@@ -126,7 +124,6 @@ export default function PetugasDashboard({
           </div>
         </div>
 
-        {/* Filter & Pencarian Cepat */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
           <input
             type="text"
@@ -150,7 +147,6 @@ export default function PetugasDashboard({
           </select>
         </div>
 
-        {/* Conditional Rendering saat Kosong */}
         {patients.length === 0 ? (
           <div className="bg-white border border-gray-200 rounded-lg p-12 text-center">
             <h3 className="text-lg font-bold text-gray-800 mb-1">
@@ -171,7 +167,7 @@ export default function PetugasDashboard({
             Tidak ada pasien yang sesuai dengan filter ini.
           </div>
         ) : viewMode === "table" ? (
-          /* Tampilan Tabel Kerja Petugas */
+
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-sm">
@@ -258,7 +254,7 @@ export default function PetugasDashboard({
             </div>
           </div>
         ) : (
-          /* Tampilan Kartu */
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPatients.map((patient) => (
               <PatientCard
