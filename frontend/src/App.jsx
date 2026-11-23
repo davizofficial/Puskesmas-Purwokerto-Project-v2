@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-// Halaman-halaman Publik (99.99% Identik dengan legacy-html)
 import HomePage from "./components/pages/HomePage";
 import LayananPage from "./components/pages/LayananPage";
 import DokterPage from "./components/pages/DokterPage";
@@ -13,11 +12,9 @@ import GaleriPage from "./components/pages/GaleriPage";
 import TentangKamiPage from "./components/pages/TentangKamiPage";
 import MemberPage from "./components/pages/MemberPage";
 
-// Halaman Petugas Medis / Autentikasi
 import LoginPage from "./components/pages/LoginPage";
 import PetugasDashboard from "./components/pages/PetugasDashboard";
 
-// Data awal realistis untuk entitas Pasien (Topik Puskesmas / Kesehatan)
 const INITIAL_PATIENTS = [
   {
     id: "PS-1042",
@@ -80,7 +77,6 @@ export default function App() {
   const [activePage, setActivePage] = useState("beranda");
   const [isStaffLoggedIn, setIsStaffLoggedIn] = useState(false);
 
-  // 5.a. Simpan daftar item sebagai state (array) di App.jsx, disinkronkan dengan backend NestJS
   const [patients, setPatients] = useState(INITIAL_PATIENTS);
 
   useEffect(() => {
@@ -98,7 +94,6 @@ export default function App() {
     fetchPatients();
   }, []);
 
-  // 5.b. Handler tambah item baru ke backend & state array
   const handleAddPatient = async (newPatientPayload) => {
     const res = await fetch(API_BASE_URL, {
       method: "POST",
@@ -118,7 +113,6 @@ export default function App() {
     return data;
   };
 
-  // Handler hapus pasien
   const handleDeletePatient = async (patientId) => {
     try {
       const res = await fetch(`${API_BASE_URL}/${patientId}`, {
@@ -135,7 +129,6 @@ export default function App() {
     }
   };
 
-  // Handler update status pasien (Panggil / Selesai)
   const handleUpdateStatus = async (patientId, newStatus) => {
     try {
       const res = await fetch(`${API_BASE_URL}/${patientId}`, {
@@ -157,7 +150,6 @@ export default function App() {
     }
   };
 
-  // Handler pengujian conditional rendering: Kosongkan data
   const handleClearAll = async () => {
     try {
       const res = await fetch(`${API_BASE_URL}/clear/all`, {
@@ -171,7 +163,6 @@ export default function App() {
     }
   };
 
-  // Handler pengujian: Pulihkan data contoh
   const handleResetSampleData = async () => {
     try {
       const res = await fetch(`${API_BASE_URL}/reset`, {
@@ -186,7 +177,6 @@ export default function App() {
     }
   };
 
-  // Handler Login & Logout Petugas
   const handleLogin = () => {
     setIsStaffLoggedIn(true);
   };
@@ -198,10 +188,9 @@ export default function App() {
 
   return (
     <div className="bg-gray-50 font-sans min-h-screen flex flex-col justify-between text-gray-800">
-      {/* 1. Header Global (Navigasi Bersih 100% Identik) */}
+
       <Header activePage={activePage} onNavigate={setActivePage} />
 
-      {/* 2. Main Content sesuai halaman aktif */}
       <main className="flex-1">
         {activePage === "beranda" && <HomePage onNavigate={setActivePage} />}
         {activePage === "layanan" && <LayananPage />}
@@ -248,7 +237,6 @@ export default function App() {
           ))}
       </main>
 
-      {/* 3. Footer Global */}
       <Footer onNavigate={setActivePage} />
     </div>
   );
