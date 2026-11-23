@@ -120,3 +120,6 @@ Berikut adalah tangkapan layar implementasi kode dan pengujian yang tersimpan pa
 
 #### g. Uji Exception Handling (ConflictException - NIK Duplikat)
 ![Uji ConflictException](docs/screenshots/09-uji-exception-handling-conflictexception.png)
+
+### 10. Integrasi Frontend dan Backend
+![Integrasi Frontend dan Backend](docs/screenshots/10-integrasi-frontend-backend.png)
